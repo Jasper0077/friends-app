@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="p-4 mb-4 bg-secondary text-white" style="--bs-bg-opacity: .65;">
+  <h1 class="display-4">
+    <%= @friend.first_name %>
+    <%= @friend.last_name %>
+  </h1>
+  <p class="lead">
+    <%= @friend.email %>  | 
+    <%= @friend.phone_number %>  |  
+    <%= @friend.instagram %>
+  </p>
+</div>
+
+<div>
+  <span class="btn-group">
+    <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-secondary"%>
+    <%= button_to "Destroy this friend", @friend, method: :delete, class:"btn btn-danger mx-4" %>
+  </span>
+  <br />
+  <%= link_to "Back to friends", friends_path, class:"btn btn-dark mt-4" %>
+</div>

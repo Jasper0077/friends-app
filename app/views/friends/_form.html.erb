@@ -16,25 +16,35 @@
     <%= form.text_field :first_name, class:"form-control", placeholder:"First Name" %>
   </div>
 
+  <br>
+
   <div class="field form-group">
     <%= form.label :last_name, style: "display: block" %>
     <%= form.text_field :last_name, class:"form-control", placeholder:"Last Name"  %>
   </div>
+
+  <br>
 
   <div class="field form-group">
     <%= form.label :email, style: "display: block" %>
     <%= form.text_field :email, class:"form-control", placeholder:"johndoe@gmail.com"  %>
   </div>
 
+  <br>
+
   <div class="field form-group">
     <%= form.label :phone_number, style: "display: block" %>
     <%= form.text_field :phone_number, class:"form-control", placeholder:"+60123456789"  %>
   </div>
 
+  <br>
+
   <div class="field form-group">
     <%= form.label :instagram, style: "display: block" %>
     <%= form.text_field :instagram, class:"form-control", placeholder:"john_doe"  %>
   </div>
+
+  <br>
 
   <div class="field form-group">
     <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden  %>

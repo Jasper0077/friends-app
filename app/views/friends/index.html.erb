@@ -9,23 +9,25 @@
       <th>Email</th>
       <th>Phone</th>
       <th>Instagram</th>
-      <th>Detail</th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @friends.each do |friend| %>
-      <tr>
-        <td>
-          <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
-        </td>
-        <td><%= friend.email %></td>
-        <td><%= friend.phone_number %></td>
-        <td><%= friend.instagram %></td>
-        <td>
-          <%= link_to "Show", friend %>
-        </td>
-      </tr>
+      <% if friend.user == current_user %>
+        <tr>
+          <td>
+            <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
+          </td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone_number %></td>
+          <td><%= friend.instagram %></td>
+          <td>
+            <%= link_to "Show", friend %>
+          </td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

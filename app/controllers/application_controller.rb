@@ -20,4 +20,12 @@ class ApplicationController < ActionController::Base
   #     # :user is the scope we are authenticating
   #     store_location_for(:user, request.fullpath)
   #   end
+  # def after_sign_up_path_for(resource)
+  #   case resource
+  #   when :user, user
+  #     root_path
+  #   else
+  #     super
+  #   end
+  # end
 end

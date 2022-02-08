@@ -1,7 +1,7 @@
 class FriendsController < ApplicationController
   before_action :set_friend, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
-  before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: %i[ index ]
+  before_action :correct_user, only: [ :show, :edit, :update, :destroy ]
 
   # GET /friends or /friends.json
   def index
